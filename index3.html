@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>산들해반찬</title>
+  <style>
+    html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}body { line-height: 1;}ol, ul { list-style: none;}blockquote, q { quotes: none;}blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none;}table { border-collapse: collapse; border-spacing: 0;}
+
+    #header {width:100%; height:192.95px; margin:0 auto;}
+    #header > .box {width:100%; height:42px; background-color: #3c8461;}
+    #header > .box > a {text-align: center; text-decoration: none; margin: 0px 0px 0px 0px; color: #fff; display: block; font-size: 15px large; padding:13px 0px 0px 0px;}
+
+    /*로그인*/
+    #header > .box2 {width:1160px; height:97px; margin:0 auto;}
+    .box2 > .top {width:182px; height:31px; background-color:#FFFFDE; float:left; margin:10px 0px 0px 0px; border-radius:15px;}
+    .box2 > .top > p {font-size:13px; margin:10px; color:#828282;}
+    .box2 > .top > p > span {color:#3c8461; font-weight: bold;}
+
+    .login {width:171.58px; height:30px; float:right; margin:10px 10px 0px 0px;}
+    .login > ul > li {color:#ddd; float:left; margin:5px 10px 0px 0px;}
+    .login > ul > li > a {text-decoration:none; color:#ddd; font-size: 10px;}
+
+    /*로고*/
+    #logo {width:270px; height:62px; margin:0 auto; padding: 30px 0px 0px;}
+    #logo > a > img {width:100%; height:100%;}
+
+    /*네비*/
+    #header > nav {width:1160px; height:53.95px; margin:0 auto;}
+    nav > ul > li {float:left; margin:17px 30px 0px 0px; color:#303030; font-size:16px; font-weight: bold;}
+    nav > ul > li > a {text-decoration:none;color:#303030;}
+    nav > ul > li > a:hover {color:#3c8461;}
+    nav > .textbox > .textbox2 {float:right; padding:0px 10px 0px 20px; width:170px; height:36px; margin:5px 0px 0px 0px; border-radius:20px; border:0; background-color:#F6F6F6;}
+    nav > .textbox > .image {width:20px; height:19px; float:right; margin:15px 70px 0px 0px}
+
+
+    /*이미지*/
+    #slider {width:100%; height:450px; background-color:#eee;}
+    #slider > #imgbox > a > img {width:100%; height:450px; background-color:#eee;}
+
+
+    #container {width:100%; height:7190.61px; margin:0 auto;}
+
+    /*이미지2*/
+
+    /*이미지3*/
+    #imgbox3 {width:1450px; height:800px; padding:20px 0px; margin:0 auto;}
+    #imgbox3 > h1 {text-align:center; font-size:40px; font-weight: bold;}
+    .menu {width:1160px; height:73px; margin:0 auto;}
+    .menu > ul {margin:30px 0px 0px 170px;}
+    .menu > ul > a {float:left; margin:15px 0px 0px 15px; text-decoration:none; background-color:#f7f7f7; padding:17px 22px; border-radius:30px;}
+    .menu > ul > a > li { color:#828282; font-size:19px;}
+    .menu > ul > a:hover {background-color:#3c8461; color:#f7f7f7;}
+    .menu > ul > a > li:hover {color:#f7f7f7;}
+    #list {width:1160px; height:441px; margin:0 auto; padding:36px 0px 0px;} 
+    #list > .foodimg {width:210px; height:280px; background-color:#ddd; float:left; margin:0px 0px 0px 18px;}
+    #list > .foodimg > a > img {width:100%; height:100%;}
+    #textbox > .text {width:210px; height:125px; float:left; margin:0px 0px 0px 18px; padding:12px 0px 0px;}
+    #textbox > .text > h5 {font-size:13px; color:#303030; font-weight: bold;}
+    #textbox > .text > p {font-size:27px; color:#046142; padding:15px 0px 0px;}
+    #textbox > .text > p > span {font-size:20px;}
+    #textbox > .text > h6 {font-size:13px; padding:15px 0px 0px; color:#828282;}
+    #textbox > .text > .icon {float:right; margin:-10px 5px 0px 0px;}
+    #textbox > .text > .icon > a > img {width:40px; height:40px;}
+
+
+    hr {margin:90px 0px 0px 0px; width: 1450px;}
+    #a {margin:0 auto;}
+    #b {margin:0 auto;}
+    #c {margin:0 auto;}
+
+    /*이미지4*/
+    #best {width:100%; height:720px; padding:100px 0px 0px; background-color:#F5FCF4;}
+    #best > h1 {font-size:30px; text-align: center; color:#303030; font-weight: bold;}
+    #best > p {text-align: center; padding:15px 0px 0px; color: #828282; font-size:16px;}
+    #best >.bestimg {width:1160px; height:557px; margin:0 auto; padding:0px 0px 11px;}
+    #best >.bestimg > .bestimgbox {width:260px; height:340px; background-color: #046142; float:left; margin:25px 0px 0px 25px;}
+    #best >.bestimg > .bestimgbox > a > img {width:100%; height:100%;}
+    #best >.bestimg > .textbox2 > .text2 {width:260px; height:140px; float:left; padding:12px 15px 26px; box-sizing: border-box
+      ;margin:0px 0px 0px 25px ;}
+    #best >.bestimg > .textbox2 > .text2 > a {text-decoration:none;}
+    #best >.bestimg > .textbox2 > .text2 > a > h5 {font-size:13px; color:#303030; font-weight: bold;}
+    #best >.bestimg > .textbox2 > .text2 > p {font-size:27px; color:#046142; padding:15px 0px 0px;}
+    #best >.bestimg > .textbox2 > .text2 > p > span {font-size:20px;}
+    #best >.bestimg > .textbox2 > .text2 > h6 {font-size:13px; padding:15px 0px 0px; color:#828282;}
+    #best >.bestimg > .textbox2 > .text2 > .icon2 {float:right; margin:-10px 5px 0px 0px;}
+    #best >.bestimg > .textbox2 > .text2 > .icon2 > a > img {width:40px; height:40px;}
+
+    /*이미지5*/
+    #new {width:1160px; height:650px; padding:50px 0px 0px 0px; margin:0 auto;}
+    #new > h1 {font-size:30px; text-align: center; color:#303030; font-weight: bold;}
+    #new > p {text-align: center; padding:20px 0px 15px; color: #828282; font-size:16px; }   
+    #new > .newbox {width:1160px; height:455px;}
+    #new > .newbox > .newboxa {width:210px; height:280px; background-color:#ddd; float:left; margin:0px 0px 0px 18px;}
+    #new > .newbox > .newboxa > a > img {width:100%; height:100%;}
+    #new > .newbox > .textbox3 > .text3 {width:210px; height:125px; float:left; margin:0px 0px 0px 18px; padding:12px 0px 0px;}
+    #new > .newbox > .textbox3 > .text3 > a {text-decoration:none;}
+    #new > .newbox > .textbox3 > .text3 > a > h5 {font-size:13px; color:#303030; font-weight: bold; }
+    #new > .newbox > .textbox3 > .text3 > p {font-size:27px; color:#046142; padding:15px 0px 0px;}
+    #new > .newbox > .textbox3 > .text3 > p > span {font-size:20px;}
+    #new > .newbox > .textbox3 > .text3 > h6 {font-size:13px; padding:15px 0px 0px; color:#828282;}
+    #new > .newbox > .textbox3 > .text3 > .icon3 {float:right; margin:-10px 5px 0px 0px;}
+    #new > .newbox > .textbox3 > .text3 > .icon3 > a > img {width:40px; height:40px;}
+
+
+    /*작은이미지1*/
+    #imgbox4 {width:1160px; height:160px; background-color: #FFFFDE; margin:0 auto;}
+    #imgbox4 > img {width:100%; height:100%;}
+
+    /*이미지6*/
+    #best2 {width:1160px; height:1000px; margin:0 auto; padding:100px 0px;}
+    #best2 > h1 {font-size:30px; text-align: center; color:#303030; font-weight: bold; }
+    #best2 > p {text-align: center; padding:15px 0px 0px; color: #828282; font-size:16px;}
+    #best2 > .bestimg2 {width:1160px; height:896px; background-color: #F6F6F6; padding:30px 0px 0px;}  
+    #best2 > .bestimg2 > .bestimgbox2 {width:350px; height:360px; background-color: #ddd; float:left; margin:0px 0px 0px 27px;}
+    #best2 > .bestimg2 > .bestimgbox2 > a > img {width:100%; height: 700px;}
+    #best2 > .bestimg2 > .text4 > .textbox4 {width:350px; height:130px; background-color: antiquewhite; float: left; margin:0px 0px 0px 27px;}
+    #best2 > .bestimg2 > .menubox > ul {width:350px; height:340px; float:left; background-color: #FFFFDE; margin:0px 0px 0px 27px;}
+    #best2 > .bestimg2 > .menubox > ul > li {width:300px; height:90px; background-color: #3c8461; margin:17px 0px 0px 25px;}
+    #best2 > .bestimg2 > .text4 > .textbox4 > h2 {font-size:20px; color:#303030; text-align:center; font-weight: bold;}
+    #best2 > .bestimg2 > .text4 > .textbox4 > p {font-size:15px; padding:12px 0px 0px; text-align:center; color: #828282;}
+    #best2 > .bestimg2 > .menubox > ul > li > a > img {width:70px; height:90px; background-color: #828282;} 
+    #best2 > .bestimg2 > .menubox > ul > li > .help {width:215px; height:90px; background-color: aqua; float:right; border-top:2px solid #666;}
+    #best2 > .bestimg2 > .menubox > ul > li > .help > h5 {font-size:15px; color:#303030; padding:0px 0px 40px 0px; font-weight: bold;}
+    #best2 > .bestimg2 > .menubox > ul > li > .help > p {font-size:17px; color: #046142;}
+    #best2 > .bestimg2 > .menubox > ul > li > .help > .icon4 {float:right; margin:0px 5px 0px 0px;}
+    #best2 > .bestimg2 > .menubox > ul > li > .help > .icon4 > a > img {width:40px; height:40px;}
+
+
+    /*큰이미지*/
+    #bigimg {width:1300px; height:490px; background-color:rgb(70, 120, 122); background-image:url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDFfMTU0%2FMDAxNjQ4NzcyNjcwMjEy.gbjLyi8six1aOlRMhwYrKo93wAZ-0u6mC8E_XhBGPj0g.d94GduAGzMWo_mZWfTweoKJlOywj4KsVJIhsoh49xE4g.PNG.cwrehab%2F4%25BF%25F9_%25C7%25C7%25C5%25A9%25B4%25D0_%25BE%25C6%25B5%25E5%25B9%25CC_%25C4%25C4%25C7%25BB%25C5%25CD_%25B9%25E8%25B0%25E6%25C8%25AD%25B8%25E9.png&type=sc960_832");
+    background-position: center; background-size: cover; margin:0 auto;}
+    #bigimg > .bigimgbox {margin:0 auto; width:1000px; height:170px;}
+    #bigimg > .bigimgbox > img {width:550px; height:350px; margin:15px 0px 0px 0px;}
+    #bigimg > .bigimgbox2 {margin:0 auto; width:100px; height:300px;}
+    #bigimg > .bigimgbox2 > img {width:500px; height:300px;}
+
+    /*이야기*/
+    #story {width:1160px; height:790px; margin:0 auto; padding:100px 0px;}
+    #story > h1 {text-align:center; font-size:40px; font-weight: bold; margin:0px 0px 20px 0px;}
+    #story > .storyimg {width:360px; height:330px; background-color: #ddd; float:left; margin:0px 0px 0px 19px;}
+    #story > .storyimg > a > img {width:100%; height:100%;}
+    #story > .storytext > .storytextbox {width:360px; height:100px; float: left; margin:0px 0px 0px 19px; padding:17px 0px 0px;}
+    #story > .storytext > .storytextbox > h6 {font-size:13px; color: #046142;}
+    #story > .storytext > .storytextbox > h4 {font-size:20px; color:#303030; padding:15px 0px 0px; font-weight: bold;}
+    #story > .storytext > .storytextbox > p {font-size: 13px; color:#828282; padding:12px 0px 0px; font-weight: bold;}
+  
+  /*작은 이미지2*/
+    #imgbox5 {width:1000px; height:160px; background-color: rgb(185, 170, 150); margin:590px 0px 0px 76px;}
+    #imgbox5 > a > img {width:100%; height:100%;}
+
+    /*이미지7*/
+      #con {width:100%; height:594px; padding:80px 0px 50px; background-color: azure; margin:0 auto;}
+      #con > h1 {font-size:30px; text-align: center; color:#303030; font-weight: bold;}
+      #con > p {text-align: center; padding:15px 0px 35px; color: #828282; font-size:16px;}
+      #con > .conimg {width:1160px; height:420px; margin:0 auto;}
+      #con > .conimg > .conimgbox {width:210px; height:250px; background-color:#ddd; float:left; margin:0px 0px 0px 18px;}
+      #con > .conimg > .conimgbox > a > img {width:100%; height:100%;}
+      #con > .conimg > .context {width:210px; height:105px; background-color:#eee; float:left; margin:0px 0px 0px 18px; padding:12px 0px 0px;}
+      #con > .conimg > .context > h6 {font-size: 12px; margin:12px 12px 0px; color: #303030; font-weight: bold;}
+      #con > .conimg > .context > p {font-size: 14px; margin:12px 12px 0px; color: #828282; } 
+
+      /*인스타*/
+      #ins {width:1160px; height:930px; margin:0 auto;}
+      #ins > h1 {font-size:30px; text-align: center; color:#303030; font-weight: bold;}
+      #ins > p {text-align: center; padding:15px 0px 35px; color: #828282; font-size:16px;}
+      #ins > .imgs {width:950px; height:620px; background-color: burlywood; margin:0 auto;}
+      #ins > .imgw {width:1160px; height:150px; margin: auto; padding:65px 0px 0px 0px;}
+      #ins > .imgw > img {width:100%; height:100%;}
+      #ins > .imgs > .imgss {width:140px; height:172px; background-color: aquamarine; float: left; margin:0px 0px 10px 15px;}
+      #ins > .imgs > .imgss > img {width:100%; height:100%;}
+
+
+      /*정보*/
+      #footer2 {width:1160px; height:298px; padding:40px 0px 0px; margin:0 auto; border-top:2px solid #ddd ;}
+      #footer2 > .ww {width: 350px; height:200px; float: left; margin:30px 0px 0px 27px;} 
+      #footer2 > .ww > h6 {width:180px; float: left ; padding:0 0 15px ; font-size: 17px; color: #046142;}
+      #footer2 > .ww > h6 > span {font-size: 15px; color: #9e9e9e;}
+      #footer2 > .ww > .www {width:350px; height:160px; float: left; border-top:3px solid #046142 ;}
+      #footer2 > .ww > .www > h1 {font-size:32px; color:#303030; margin:25px 0px 15px 0px ;}
+      #footer2 > .ww > .www > ul > li {font-size:12px; margin:10px 0px 0px; color:#828282;}
+      #footer2 > .ww > .www > ul > li > pre {font-size:12px; margin:10px 0px 0px; color:#333;}
+      #footer2 > .ww > .www > ul > .tlqkf {margin:20px 0px 0px 0px; font-size:14px; color: #333;}
+      #footer2 > .ww > .www > h2 {font-size:16px; color:#333; padding:30px 0px 0px; }
+      #footer2 > .ww > .www > a > img {float: right; width: 90px; height:35px; margin:50px 0px 0px 0px; }
+      #footer2 > .ww > .www > .wwww > button {float: right; width: 90px; height:35px; margin:0px -90px 10px 10px; border-radius:5px; border: 1px;;}
+      #footer2 > .ww > .www > ul > li > a > img {float: left; margin:50px 10px 0px 0px;} 
+
+
+
+     #footer {width:100%; height:430px; margin:0 auto;}
+     .q {width:1160px; height:120px; padding:45px 0px; background-color: #f7f7f7; margin:0 auto; background-color: #333;}
+     .q > .qq {width:1160px; height:20px; padding:0px 10px 15px 50px;} 
+     .q > .qq > ul > li {float: left; font-size:14px; margin:0px 0px 0px 10px; color: #fff;}
+     .q > .qqq > ul {width:1160px; height:35px; padding:0px 0px 0px 50px;}
+     .q > .qqq > ul > li {float: left; font-size:13px; color:#fff; margin:0px 0px 0px 10px;} 
+     .q > .qqq > p {color: #fff; font-size:13px; padding: 20px 0px 0px 60px; color:#ffffff80;}
+
+
+  </style>
+</head>
+<body>
+  <div id="header">
+
+    <div class="box">
+      <a href="#">회원가입하고 할인쿠폰 받아가세요!</a>
+    </div>
+
+    <div class="box2">
+
+      <div class="top">
+        <p>수도권 이외 지역 <span>택배배송</span></p>
+      </div>
+
+      <div class="login">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li>|</li>
+          <li><a href="#">회원가입</a></li>
+          <li>|</li>
+          <li><a href="#">배송안내</a></li>             
+        </ul>
+
+      </div>
+
+      <div id="logo">
+        <a href="#"><img src="img/logo.jpg" alt="asd"></a>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">=</a></li>
+        <li><a href="#">모든반찬</a></li>
+        <li>|</li>
+        <li><a href="#">인기메뉴</a></li>
+        <li><a href="#">신메뉴</a></li>
+        <li><a href="#">브랜드소개</a></li>
+        <li><a href="#">이용가이드</a></li>         
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+
+      <div class="textbox">
+        <input type="image" src="img/icon.jpg" alt="검색" class="image">
+        <input type="textbox" name="오늘 뭐먹지" class="textbox2" placeholder="오늘 뭐 먹지" autocomplete="off">
+
+      </div>
+    </nav>
+
+  </div>
+
+  <div id="slider">
+
+    <div id="imgbox">
+      <a href="#"><img src="img/mainimg.jpg" alt="ㅁㄴㅇ"></a>
+    </div>
+
+  </div>
+
+  <div id="container">
+
+
+    <div id="imgbox3">
+      <h1>엄마 셋이 추천드려요.</h1>
+      <div class="menu">
+        <ul>
+          <a href="#"><li>1인 메뉴</li></a>
+          <a href="#"><li>어린이</li></a>
+          <a href="#"><li>나물</li></a>
+          <a href="#"><li>밑반찬</li></a>
+          <a href="#"><li>국 찌개</li></a>
+          <a href="#"><li>밀키트</li></a>
+          <a href="#"><li>메인요리</li></a>
+        </ul>
+      </div>
+
+      <div id="list">
+
+        <div class="foodimg">
+          <a href="#"><img src="img/foodimg1.jpg" alt="ㅁㄴㅇ"></a>
+        </div>
+
+
+        <div class="foodimg">
+          <a href="#"><img src="img/foodimg2.jpg" alt="ㅁㄴㅇ"></a>
+        </div>
+
+
+        <div class="foodimg">
+          <a href="#"><img src="img/foodimg3.jpg" alt="ㄴㅇㄹ"></a>
+        </div>
+
+
+        <div class="foodimg">
+          <a href="#"><img src="img/foodimg4.jpg" alt="ㅁㅇ"></a>
+        </div>
+
+
+        <div class="foodimg">
+          <a href="#"><img src="img/foodimg5.jpg" alt="ㅁㄴㅇ"></a>
+        </div>
+
+
+        <div id="textbox">
+
+
+          <div class="text">
+
+            <div class="icon">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+
+            <h5>1인메뉴 골라담기(5% 할인)</h5>
+            <p>3,500<span>원</span></p>
+            <h6>#1인가구#맞벌이#소용량</h6>
+          </div>
+
+
+          <div class="text">
+            <div class="icon">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <h5>오이지 무침1인분</h5>
+            <p>3,700<span>원</span></p>
+            <h6>#국내산고춧가루#국내산오이</h6>
+          </div>
+
+
+          <div class="text">
+            <div class="icon">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <h5>우렁된장찌개1인분</h5>
+            <p>5,600<span>원</span></p>
+            <h6>#영양가득#국내산우렁이</h6>
+          </div>
+
+
+          <div class="text">
+            <div class="icon">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <h5>꽈리고추멸치볶음1인분</h5>
+            <p>4,700<span>원</span></p>
+            <h6>#국내산꽈리고추#매콤향긋</h6>
+          </div>
+
+
+          <div class="text">
+            <div class="icon">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <h5>시래기된장볶음1인분</h5>
+            <p>5,000<span>원</span></p>
+            <h6>#국내산시래기#자연건조#고소한들기름</h6>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+
+    </div>
+
+    <div id="best">
+      <h1>꾸준하게 팔려요.</h1>
+      <p>밥상계의 스테디셀러</p>
+
+      <div class="bestimg">
+
+        <div class="bestimgbox">
+          <a href="#"><img src="img/bestimg1.jpg" alt="ads"></a>
+        </div>
+
+
+        <div class="bestimgbox">
+          <a href="#"><img src="img/bestimg2.jpg" alt="asd"></a>
+        </div>
+
+
+        <div class="bestimgbox">
+          <a href="#"><img src="img/bestimg3.jpg" alt="asd"></a>
+        </div>
+
+
+        <div class="bestimgbox">
+          <a href="#"><img src="img/bestimg4.jpg" alt="asd"></a>
+        </div>
+        <div class="textbox2">
+
+          <div class="text2">
+            <div class="icon2">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>흑임자연근무침</h5></a>
+            <p>5,100<span>원</span></p>
+            <h6>#흑임자레몬드레싱#아삭고소</h6>
+          </div>
+
+          <div class="text2">
+            <div class="icon2">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>한돈매콤불고기</h5></a>
+            <p>18,600<span>원</span></p>
+            <h6>#한돈목살 #매콤 #간편조리</h6>
+          </div>
+
+          <div class="text2">
+            <div class="icon2">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>파김치</h5></a>
+            <p>13,900<span>원</span></p>
+            <h6>#국내산재료 #알싸하고개운한맛</h6>
+          </div>
+
+          <div class="text2">
+            <div class="icon2">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>한돈동그랑땡</h5></a>
+            <p>12,800<span>원</span></p>
+            <h6>#한돈 #국내산콩두부</h6>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <hr id="a">
+
+    <div id="new">
+      <h1>새로 나왔어요</h1>
+      <p>질리지 않도록 노력할게요</p>
+      <div class="newbox">
+        <div class="newboxa">
+          <a href="#"><img src="img/newboxa1.jpg" alt=""></a>
+        </div>
+        <div class="newboxa">
+          <a href="#"><img src="img/newboxa2.jpg" alt=""></a>
+        </div>
+        <div class="newboxa">
+          <a href="#"><img src="img/newboxa3.jpg" alt=""></a>
+        </div>
+        <div class="newboxa">
+          <a href="#"><img src="img/newboxa4.jpg" alt=""></a>
+        </div>
+        <div class="newboxa">
+          <a href="#"><img src="img/newboxa5.jpg" alt=""></a>
+        </div>
+
+        <div class="textbox3">
+          <div class="text3">
+            <div class="icon3">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>한돈고추장찌개_1인분 (400g)</h5></a>
+            <p>7,000<span>원</span></p>
+            <h6>#한돈 #입맛돋아요</h6>
+          </div>
+          <div class="text3">
+            <div class="icon3">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>세발나물무침 (100g)</h5></a>
+            <p>4,230<span>원</span></p>
+            <h6>#새콤달콤 #오돌오돌</h6>
+          </div>
+          <div class="text3">
+            <div class="icon3">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>유채나물무침 (150g)</h5></a>
+            <p>4,410<span>원</span></p>
+            <h6>#입맛돋우는 #향긋쌉싸름</h6>
+          </div>
+          <div class="text3">
+            <div class="icon3">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>오이지무침 (120g)</h5></a>
+            <p>4,600<span>원</span></p>
+            <h6>#국내산고추가루</h6>
+          </div>
+          <div class="text3">
+            <div class="icon3">
+              <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+            </div>
+            <a href="#"><h5>모둠전5종</h5></a>
+            <p>27,000<span>원</span></p>
+            <h6>#비오는날 #아이들 #최애반찬</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr id="b">
+
+    <div id="imgbox4">
+      <img src="img/imgbox4.jpg" alt="asd">
+    </div>
+
+    <div id="best2">
+      <h1>여기 있어요 밥도둑!</h1>
+      <p>아이부터 어른까지. 반찬부터 요리까지</p>
+      <div class="bestimg2">
+
+        <div class="bestimgbox2">
+           <a href="#"><img src="img/bestimgbox2.jpg" alt=""></a>
+        </div>
+        <div class="bestimgbox2">
+          <a href="#"><img src="img/bestimgbox1.jpg" alt=""></a>
+        </div>
+        <div class="bestimgbox2">
+          <a href="#"><img src="img/bestimgbox3.jpg" alt=""></a>
+        </div>
+        <div class="text4">
+          <div class="textbox4">
+            <h2>산들해 한정식 베스트 메뉴</h2>
+            <p>15년 검증된 맛</p>
+          </div>
+          <div class="textbox4">
+            <h2>겨울을 깨우는 봄나물 3종</h2>
+            <p>집나간 입맛이 돌아와요</p>
+          </div>
+          <div class="textbox4">
+            <h2>찐단골 반찬이 왔어요</h2>
+            <p>언제나 반가운 맛</p>
+          </div>
+        </div>
+        <div class="menubox">
+          <ul>
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+              <h5>한돈매콤불고기</h5>
+              <p>18,600원</p>
+              </div>
+              <a href="#"><img src="img/help1.jpg" alt=""></a>
+            </li>
+
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>한우불고기</h5>
+                <p>30,600원</p>
+                </div>
+              <a href="#"><img src="img/help2.jpg" alt=""></a>
+            </li>
+
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>한돈간장불고기</h5>
+                <p>16,200원</p>
+                </div>
+              <a href="#"><img src="img/help3.jpg" alt=""></a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>세발나물무침</h5>
+                <p>4,230원</p>
+                </div>
+              <a href="#"><img src="img/help4.jpg" alt=""></a>
+            </li>
+
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>유채나물무침</h5>
+                <p>4,410원</p>
+                </div>
+              <a href="#"><img src="img/help5.jpg" alt=""></a>
+            </li>
+            
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>방풍나물무침</h5>
+                <p>4,600원</p>
+                </div>
+              <a href="#"><img src="img/help6.jpg" alt=""></a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>감자조림</h5>
+                <p>3,800원</p>
+                </div>
+              <a href="#"><img src="img/help7.jpg" alt=""></a>
+            </li>
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>매콤어묵볶음</h5>
+                <p>4,700원</p>
+                </div>
+              <a href="#"><img src="img/help8.jpg" alt=""></a>
+            </li>
+            <li>
+              <div class="help">
+                <div class="icon4">
+                  <a href="#"><img src="img/icon2.jpg" alt="ㅁㄴㅇ"></a>
+                </div>
+                <h5>고추장진미채</h5>
+                <p>5,600원</p>
+                </div>
+              <a href="#"><img src="img/help9.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    
+    <div id="bigimg">
+      <div class="bigimgbox"><img src="https://image.jtbcplus.kr/data/contents/jam_photo/202107/12/5c07fb00-a8ed-4ac8-a47f-4fae0a3ab609.jpg" alt="sd"></div>
+      <div class="bigimgbox2"><img src="https://cdn-pro-web-228-238.cdn-nhncommerce.com/sdhfood1_godomall_com/data/skin/front/designwib/wib/img/667x432_02.png" alt="asd"></div>
+    </div>
+    
+      
+  
+
+    <div id="story">
+      <h1>산들해 이야기</h1>
+      <div class="storyimg">
+        <a href="#"><img src="img/storyimg1.jpg" alt=""></a>
+      </div>
+      <div class="storyimg">
+        <a href="#"><img src="img/storyimg2.jpg" alt=""></a>
+      </div>
+      <div class="storyimg">
+        <a href="#"><img src="img/storyimg3.jpg" alt=""></a>
+      </div>
+      <div class="storytext">
+          <div class="storytextbox">
+            <h6>asdsdadada</h6>
+            <h4>위생은 요리의 기본 </h4>
+            <p>모든 음식은 산들해 반찬에서 직접 조리되며,
+              조리부터 포장까지 모든 과정은 위생 설비가 완벽히 갖춰진
+              ‘센트럴키친’에서...</p>
+          </div>
+          <div class="storytextbox">
+            <h6>asdsdadada</h6>
+            <h4>15년간 누적방문 고객650만명</h4>
+            <p>15년간 한 결 같은 마음으로 이 약속을 지켜왔기에,
+              지금까지 650만명의 고객분들...</p>
+          </div>
+          <div class="storytextbox">
+            <h6>asdsdadada</h6>
+            <h4>건강한 재료의 한식을 맛볼 수...</h4>
+            <p>2005년 11월, 한식 반찬의 명가 산들해 반찬은 바로 이 생각에서 출발했습니다.
+              주재료부터 양념까지 원산지, 원재료, 함량 모든 것을 투...</p>
+          </div>
+      </div>
+      <div id="imgbox5">
+          <a href="#"><img src="https://cdn-pro-web-228-238.cdn-nhncommerce.com/sdhfood1_godomall_com/data/skin/front/designwib/img/banner/slider_1846043438/7f2d139c8d0007d453746524bed4af6e_27931.png" alt="asd"></a>
+      </div>
+    </div>
+    <div id="con">
+      <h1>고객 생생후기</h1>
+      <p>고객님들의 생생한 후기! 산들해반찬 함게즐겨요</p>
+      <div class="conimg">
+          <div class="conimgbox">
+            <a href="#"><img src="img/conimg1.jpg" alt=""></a>
+          </div>
+          <div class="conimgbox">
+            <a href="#"><img src="img/conimg2.jpg" alt=""></a>
+          </div>
+          <div class="conimgbox">
+            <a href="#"><img src="img/conimg3.jpg" alt=""></a>
+          </div>
+          <div class="conimgbox">
+            <a href="#"><img src="img/conimg4.jpg" alt=""></a>
+          </div>
+          <div class="conimgbox">
+            <a href="#"><img src="img/conimg5.jpg" alt=""></a>
+          </div>
+          
+          <div class="context">
+            <h6>정말 아~삭아~삭 꼬소꼬소 맛있어요 비법 가르쳐주세요 두번째 구매인데 여전히 맛있네요</h6>
+            <p>김정* | 2023.01.03</p>
+          </div>
+          <div class="context">
+            <h6>정말 아~삭아~삭 꼬소꼬소 맛있어요 비법 가르쳐주세요 두번째 구매인데 여전히 맛있네요</h6>
+            <p>김정* | 2023.01.03</p>
+          </div>
+          <div class="context">
+            <h6>정말 아~삭아~삭 꼬소꼬소 맛있어요 비법 가르쳐주세요 두번째 구매인데 여전히 맛있네요</h6>
+            <p>김정* | 2023.01.03</p>
+          </div>
+          <div class="context">
+            <h6>정말 아~삭아~삭 꼬소꼬소 맛있어요 비법 가르쳐주세요 두번째 구매인데 여전히 맛있네요</h6>
+            <p>김정* | 2023.01.03</p>
+          </div>
+          <div class="context">
+            <h6>정말 아~삭아~삭 꼬소꼬소 맛있어요 비법 가르쳐주세요 두번째 구매인데 여전히 맛있네요</h6>
+            <p>김정* | 2023.01.03</p>
+          </div>
+      </div>
+      <hr id="c">
+
+      
+    </div>
+    <div id="ins">
+      <h1>인스타그램</h1>
+      <p>정성 가득한 프리미엄 반찬 산들해의 소식을 받아보세요</p>
+      <div class="imgs">
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="ads">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="asd">
+          </div>
+          <div class="imgss">
+            <img src="img/ins1.jpg" alt="ad">
+          </div>
+      </div>
+      <div class="imgw">
+        <img src="https://cdn-pro-web-228-238.cdn-nhncommerce.com/sdhfood1_godomall_com/data/skin/front/designwib/img/banner/f7a51309d8955cb9859e6a0aff4a5207_64079.jpg" alt="asd">
+      </div>
+      </div>
+      <div id="footer2">
+        <div class="ww">
+        <h6>고객행복센터</h6>
+        
+        <div class="www">
+          <h1>1577-1759</h1>
+          <a href="#"><img src="img/www1.jpg" alt=""></a>
+          <div class="wwww">
+          <button>1:1문의하기</button>
+          </div>
+          <ul>
+            <li>월 ~ 금 : 9시 - 18시</li>
+            <li>점심시간 : 12시 30분 - 13시 30분</li>
+            <li>일요일 : 9시 - 12시 (토요일, 공휴일 휴무)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ww">
+        <h6>공지사항 <span>| 이벤트</span></h6>
+        
+        <div class="www">
+          <ul>
+            <li class="tlqkf"> <pre>2023년 3월1일 배송안내[삼일절]                          2023-02-23</pre>  </li>
+            <li class="tlqkf"> <pre>리뷰적립금 x 2배 - 매일매일 따블!                        2023-02-15</pre></li>
+            <li class="tlqkf"> <pre>2023년 설날 배송안내                                        2023-01-10</pre></li>
+            <li class="tlqkf"> <pre>2023년 새해 배송안내 [ 신정 ]                             2022-12-28</pre></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ww">
+        <h6>산들해 모바일 앱</h6>
+        
+        <div class="www">
+          <h2>산들해 SNS 팔로우하여 소식 받으시고<br>
+            다양한 혜택 받아가세요~</h2>
+            <ul>
+          <li><a href="#"><img src="img/i-icon1.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/i-icon2.jpg" alt=""></a></li>
+        </ul>
+        </div>
+        
+      </div>
+      </div>
+    
+
+
+  </div>
+  <div id="footer">
+    <div class="q">
+    <div class="qq">
+    <ul>
+      <li>회사소개</li>
+      <li>|</li>
+      <li>이용약관</li>
+      <li>|</li>
+      <li>개인정보처리방침</li>
+      <li>|</li>
+      <li>이용안내</li>
+    </ul>
+  </div>
+    <div class="qqq">
+      <ul>
+        <li>상호명 : 주식회사 산들해</li>
+        <li>|</li>
+        <li>대표자 : 이상경</li>
+        <li>|</li>
+        <li>사업자등록번호 : 724-86-01939 사업자번호확인</li>
+        <li>|</li>
+        <li>주소 : 서울특별시 양천구 목동서로 349 (센트럴프라자) 지하 1층, 개인정보보호책임자 : 이강섭
+          통신판매업신고번호 : 제2021-서울양천-2012호</li>
+        <li>|</li>
+        <li>TEL : 1577-1759</li>
+        <li>|</li>
+        <li> E-MAIL : sdhmarketing@naver.com</li>
+      </ul>
+      <p>COPYRIGHT© 2021 Hongsfood corp. ALL RIGHT RESERVED. HOSTING BY 엔에이치엔커머스(주). DESIGN BY 디자인위브</p>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
